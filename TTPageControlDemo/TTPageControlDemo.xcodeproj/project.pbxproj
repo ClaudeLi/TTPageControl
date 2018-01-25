@@ -1,0 +1,615 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D34F4646201A001600334BDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D34F4645201A001600334BDF /* AppDelegate.m */; };
+		D34F4649201A001600334BDF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D34F4648201A001600334BDF /* ViewController.m */; };
+		D34F464C201A001600334BDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D34F464A201A001600334BDF /* Main.storyboard */; };
+		D34F464E201A001600334BDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D34F464D201A001600334BDF /* Assets.xcassets */; };
+		D34F4651201A001600334BDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D34F464F201A001600334BDF /* LaunchScreen.storyboard */; };
+		D34F4654201A001600334BDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D34F4653201A001600334BDF /* main.m */; };
+		D34F465E201A001600334BDF /* TTPageControlDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D34F465D201A001600334BDF /* TTPageControlDemoTests.m */; };
+		D34F4669201A001600334BDF /* TTPageControlDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D34F4668201A001600334BDF /* TTPageControlDemoUITests.m */; };
+		D34F4680201A006400334BDF /* TTPageControlKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D34F467C201A005A00334BDF /* TTPageControlKit.framework */; };
+		D34F4683201A00F000334BDF /* UIColor+CLExt.m in Sources */ = {isa = PBXBuildFile; fileRef = D34F4681201A00F000334BDF /* UIColor+CLExt.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D34F465A201A001600334BDF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D34F4639201A001600334BDF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D34F4640201A001600334BDF;
+			remoteInfo = TTPageControlDemo;
+		};
+		D34F4665201A001600334BDF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D34F4639201A001600334BDF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D34F4640201A001600334BDF;
+			remoteInfo = TTPageControlDemo;
+		};
+		D34F467B201A005A00334BDF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D34F4676201A005A00334BDF /* TTPageControlKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D34F46122019FEEC00334BDF;
+			remoteInfo = TTPageControlKit;
+		};
+		D34F467D201A005A00334BDF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D34F4676201A005A00334BDF /* TTPageControlKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D34F461B2019FEEC00334BDF;
+			remoteInfo = TTPageControlKitTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D34F4641201A001600334BDF /* TTPageControlDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTPageControlDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D34F4644201A001600334BDF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D34F4645201A001600334BDF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D34F4647201A001600334BDF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D34F4648201A001600334BDF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D34F464B201A001600334BDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D34F464D201A001600334BDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D34F4650201A001600334BDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D34F4652201A001600334BDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D34F4653201A001600334BDF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D34F4659201A001600334BDF /* TTPageControlDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TTPageControlDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D34F465D201A001600334BDF /* TTPageControlDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTPageControlDemoTests.m; sourceTree = "<group>"; };
+		D34F465F201A001600334BDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D34F4664201A001600334BDF /* TTPageControlDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TTPageControlDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D34F4668201A001600334BDF /* TTPageControlDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTPageControlDemoUITests.m; sourceTree = "<group>"; };
+		D34F466A201A001600334BDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D34F4676201A005A00334BDF /* TTPageControlKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TTPageControlKit.xcodeproj; path = ../../TTPageControlKit/TTPageControlKit.xcodeproj; sourceTree = "<group>"; };
+		D34F4681201A00F000334BDF /* UIColor+CLExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CLExt.m"; sourceTree = "<group>"; };
+		D34F4682201A00F000334BDF /* UIColor+CLExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CLExt.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D34F463E201A001600334BDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D34F4680201A006400334BDF /* TTPageControlKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D34F4656201A001600334BDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D34F4661201A001600334BDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D34F4638201A001600334BDF = {
+			isa = PBXGroup;
+			children = (
+				D34F4643201A001600334BDF /* TTPageControlDemo */,
+				D34F465C201A001600334BDF /* TTPageControlDemoTests */,
+				D34F4667201A001600334BDF /* TTPageControlDemoUITests */,
+				D34F4642201A001600334BDF /* Products */,
+				D34F467F201A006400334BDF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D34F4642201A001600334BDF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D34F4641201A001600334BDF /* TTPageControlDemo.app */,
+				D34F4659201A001600334BDF /* TTPageControlDemoTests.xctest */,
+				D34F4664201A001600334BDF /* TTPageControlDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D34F4643201A001600334BDF /* TTPageControlDemo */ = {
+			isa = PBXGroup;
+			children = (
+				D34F4676201A005A00334BDF /* TTPageControlKit.xcodeproj */,
+				D34F4644201A001600334BDF /* AppDelegate.h */,
+				D34F4645201A001600334BDF /* AppDelegate.m */,
+				D34F4647201A001600334BDF /* ViewController.h */,
+				D34F4648201A001600334BDF /* ViewController.m */,
+				D34F4682201A00F000334BDF /* UIColor+CLExt.h */,
+				D34F4681201A00F000334BDF /* UIColor+CLExt.m */,
+				D34F464A201A001600334BDF /* Main.storyboard */,
+				D34F464D201A001600334BDF /* Assets.xcassets */,
+				D34F464F201A001600334BDF /* LaunchScreen.storyboard */,
+				D34F4652201A001600334BDF /* Info.plist */,
+				D34F4653201A001600334BDF /* main.m */,
+			);
+			path = TTPageControlDemo;
+			sourceTree = "<group>";
+		};
+		D34F465C201A001600334BDF /* TTPageControlDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				D34F465D201A001600334BDF /* TTPageControlDemoTests.m */,
+				D34F465F201A001600334BDF /* Info.plist */,
+			);
+			path = TTPageControlDemoTests;
+			sourceTree = "<group>";
+		};
+		D34F4667201A001600334BDF /* TTPageControlDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D34F4668201A001600334BDF /* TTPageControlDemoUITests.m */,
+				D34F466A201A001600334BDF /* Info.plist */,
+			);
+			path = TTPageControlDemoUITests;
+			sourceTree = "<group>";
+		};
+		D34F4677201A005A00334BDF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D34F467C201A005A00334BDF /* TTPageControlKit.framework */,
+				D34F467E201A005A00334BDF /* TTPageControlKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D34F467F201A006400334BDF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D34F4640201A001600334BDF /* TTPageControlDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D34F466D201A001600334BDF /* Build configuration list for PBXNativeTarget "TTPageControlDemo" */;
+			buildPhases = (
+				D34F463D201A001600334BDF /* Sources */,
+				D34F463E201A001600334BDF /* Frameworks */,
+				D34F463F201A001600334BDF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TTPageControlDemo;
+			productName = TTPageControlDemo;
+			productReference = D34F4641201A001600334BDF /* TTPageControlDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D34F4658201A001600334BDF /* TTPageControlDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D34F4670201A001600334BDF /* Build configuration list for PBXNativeTarget "TTPageControlDemoTests" */;
+			buildPhases = (
+				D34F4655201A001600334BDF /* Sources */,
+				D34F4656201A001600334BDF /* Frameworks */,
+				D34F4657201A001600334BDF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D34F465B201A001600334BDF /* PBXTargetDependency */,
+			);
+			name = TTPageControlDemoTests;
+			productName = TTPageControlDemoTests;
+			productReference = D34F4659201A001600334BDF /* TTPageControlDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D34F4663201A001600334BDF /* TTPageControlDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D34F4673201A001600334BDF /* Build configuration list for PBXNativeTarget "TTPageControlDemoUITests" */;
+			buildPhases = (
+				D34F4660201A001600334BDF /* Sources */,
+				D34F4661201A001600334BDF /* Frameworks */,
+				D34F4662201A001600334BDF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D34F4666201A001600334BDF /* PBXTargetDependency */,
+			);
+			name = TTPageControlDemoUITests;
+			productName = TTPageControlDemoUITests;
+			productReference = D34F4664201A001600334BDF /* TTPageControlDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D34F4639201A001600334BDF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = ClaudeLi;
+				TargetAttributes = {
+					D34F4640201A001600334BDF = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					D34F4658201A001600334BDF = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D34F4640201A001600334BDF;
+					};
+					D34F4663201A001600334BDF = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D34F4640201A001600334BDF;
+					};
+				};
+			};
+			buildConfigurationList = D34F463C201A001600334BDF /* Build configuration list for PBXProject "TTPageControlDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D34F4638201A001600334BDF;
+			productRefGroup = D34F4642201A001600334BDF /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D34F4677201A005A00334BDF /* Products */;
+					ProjectRef = D34F4676201A005A00334BDF /* TTPageControlKit.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				D34F4640201A001600334BDF /* TTPageControlDemo */,
+				D34F4658201A001600334BDF /* TTPageControlDemoTests */,
+				D34F4663201A001600334BDF /* TTPageControlDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D34F467C201A005A00334BDF /* TTPageControlKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TTPageControlKit.framework;
+			remoteRef = D34F467B201A005A00334BDF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D34F467E201A005A00334BDF /* TTPageControlKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = TTPageControlKitTests.xctest;
+			remoteRef = D34F467D201A005A00334BDF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D34F463F201A001600334BDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D34F4651201A001600334BDF /* LaunchScreen.storyboard in Resources */,
+				D34F464E201A001600334BDF /* Assets.xcassets in Resources */,
+				D34F464C201A001600334BDF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D34F4657201A001600334BDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D34F4662201A001600334BDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D34F463D201A001600334BDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D34F4649201A001600334BDF /* ViewController.m in Sources */,
+				D34F4654201A001600334BDF /* main.m in Sources */,
+				D34F4683201A00F000334BDF /* UIColor+CLExt.m in Sources */,
+				D34F4646201A001600334BDF /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D34F4655201A001600334BDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D34F465E201A001600334BDF /* TTPageControlDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D34F4660201A001600334BDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D34F4669201A001600334BDF /* TTPageControlDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D34F465B201A001600334BDF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D34F4640201A001600334BDF /* TTPageControlDemo */;
+			targetProxy = D34F465A201A001600334BDF /* PBXContainerItemProxy */;
+		};
+		D34F4666201A001600334BDF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D34F4640201A001600334BDF /* TTPageControlDemo */;
+			targetProxy = D34F4665201A001600334BDF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D34F464A201A001600334BDF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D34F464B201A001600334BDF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D34F464F201A001600334BDF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D34F4650201A001600334BDF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D34F466B201A001600334BDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D34F466C201A001600334BDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D34F466E201A001600334BDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TTPageControlDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiaooo.TTPageControlDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D34F466F201A001600334BDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TTPageControlDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiaooo.TTPageControlDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D34F4671201A001600334BDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TTPageControlDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiaooo.TTPageControlDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TTPageControlDemo.app/TTPageControlDemo";
+			};
+			name = Debug;
+		};
+		D34F4672201A001600334BDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TTPageControlDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiaooo.TTPageControlDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TTPageControlDemo.app/TTPageControlDemo";
+			};
+			name = Release;
+		};
+		D34F4674201A001600334BDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TTPageControlDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiaooo.TTPageControlDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TTPageControlDemo;
+			};
+			name = Debug;
+		};
+		D34F4675201A001600334BDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TTPageControlDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiaooo.TTPageControlDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TTPageControlDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D34F463C201A001600334BDF /* Build configuration list for PBXProject "TTPageControlDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D34F466B201A001600334BDF /* Debug */,
+				D34F466C201A001600334BDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D34F466D201A001600334BDF /* Build configuration list for PBXNativeTarget "TTPageControlDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D34F466E201A001600334BDF /* Debug */,
+				D34F466F201A001600334BDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D34F4670201A001600334BDF /* Build configuration list for PBXNativeTarget "TTPageControlDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D34F4671201A001600334BDF /* Debug */,
+				D34F4672201A001600334BDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D34F4673201A001600334BDF /* Build configuration list for PBXNativeTarget "TTPageControlDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D34F4674201A001600334BDF /* Debug */,
+				D34F4675201A001600334BDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D34F4639201A001600334BDF /* Project object */;
+}
