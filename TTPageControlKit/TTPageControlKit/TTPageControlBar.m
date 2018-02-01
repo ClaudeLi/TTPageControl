@@ -106,6 +106,7 @@ static NSString *itemIdentifier = @"TTPageControlCellIdentifier";
     if (!_lineView) {
         _lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, _lineSize.width, _lineSize.height)];
         _lineView.backgroundColor = [UIColor blackColor];
+        _lineView.center = CGPointZero;
         [self addSubview:_lineView];
     }
     return _lineView;
@@ -179,6 +180,14 @@ static NSString *itemIdentifier = @"TTPageControlCellIdentifier";
         return CGSizeMake(layout.titleWidth, self.bounds.size.height-_flowLayout.sectionInset.top - _flowLayout.sectionInset.bottom - self.contentInset.top- self.contentInset.bottom);
     }
     return CGSizeZero;
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    if (scrollView == self) {
+        if (self.scrollDidScroll) {
+            self.scrollDidScroll(scrollView);
+        }
+    }
 }
 
 - (void)setScrollScale:(CGFloat)scrollScale{
@@ -295,10 +304,14 @@ static NSString *itemIdentifier = @"TTPageControlCellIdentifier";
         CGFloat offset = x - width/2.0 + cell.frame.size.width/2.0;
         [self setContentOffset:CGPointMake(offset, 0) animated:YES];
     }
-    _lineCenter = CGPointMake(cell.center.x, self.bounds.size.height - self.contentInset.bottom-self.lineSize.height/2.0);
-    [UIView animateWithDuration:0.2 animations:^{
+    _lineCenter = CGPointMake(cell.center.x, self.bounds.size.height - _flowLayout.sectionInset.bottom-self.lineSize.height/2.0);
+    if (CGPointEqualToPoint(CGPointZero, self.lineView.center)) {
         self.lineView.center = _lineCenter;
-    }];
+    }else{
+        [UIView animateWithDuration:0.2 animations:^{
+            self.lineView.center = _lineCenter;
+        }];
+    }
 }
 
 - (NSArray *)getRGBWithColor:(UIColor *)color{

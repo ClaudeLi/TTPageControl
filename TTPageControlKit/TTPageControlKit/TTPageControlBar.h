@@ -34,6 +34,7 @@
 @property (nonatomic, assign) CGFloat   scrollScale;            //  rang (-1, 1)
 
 @property (nonatomic, copy) void(^didSelectedItemBlock)(NSInteger index, TTPageControlModel *model);
+@property (nonatomic, copy) void(^scrollDidScroll)(UIScrollView *scrollView);
 
 - (void)scrollToIndex:(NSInteger)index;
 
