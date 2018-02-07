@@ -7,43 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D34F4646201A001600334BDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D34F4645201A001600334BDF /* AppDelegate.m */; };
-		D34F4649201A001600334BDF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D34F4648201A001600334BDF /* ViewController.m */; };
-		D34F464C201A001600334BDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D34F464A201A001600334BDF /* Main.storyboard */; };
-		D34F464E201A001600334BDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D34F464D201A001600334BDF /* Assets.xcassets */; };
-		D34F4651201A001600334BDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D34F464F201A001600334BDF /* LaunchScreen.storyboard */; };
-		D34F4654201A001600334BDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D34F4653201A001600334BDF /* main.m */; };
-		D34F465E201A001600334BDF /* TTPageControlDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D34F465D201A001600334BDF /* TTPageControlDemoTests.m */; };
-		D34F4669201A001600334BDF /* TTPageControlDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D34F4668201A001600334BDF /* TTPageControlDemoUITests.m */; };
-		D34F4680201A006400334BDF /* TTPageControlKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D34F467C201A005A00334BDF /* TTPageControlKit.framework */; };
-		D34F4683201A00F000334BDF /* UIColor+CLExt.m in Sources */ = {isa = PBXBuildFile; fileRef = D34F4681201A00F000334BDF /* UIColor+CLExt.m */; };
+		D3A9C841202B01690017FB0D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A9C840202B01690017FB0D /* AppDelegate.m */; };
+		D3A9C844202B01690017FB0D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A9C843202B01690017FB0D /* ViewController.m */; };
+		D3A9C847202B01690017FB0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3A9C845202B01690017FB0D /* Main.storyboard */; };
+		D3A9C849202B01690017FB0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3A9C848202B01690017FB0D /* Assets.xcassets */; };
+		D3A9C84C202B01690017FB0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3A9C84A202B01690017FB0D /* LaunchScreen.storyboard */; };
+		D3A9C84F202B01690017FB0D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A9C84E202B01690017FB0D /* main.m */; };
+		D3A9C859202B01690017FB0D /* TTPageControlDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A9C858202B01690017FB0D /* TTPageControlDemoTests.m */; };
+		D3A9C864202B01690017FB0D /* TTPageControlDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A9C863202B01690017FB0D /* TTPageControlDemoUITests.m */; };
+		D3A9C873202B01F10017FB0D /* UIColor+CLExt.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A9C872202B01F10017FB0D /* UIColor+CLExt.m */; };
+		D3A9C87E202B020D0017FB0D /* TTPageControlKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3A9C87A202B01FD0017FB0D /* TTPageControlKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D34F465A201A001600334BDF /* PBXContainerItemProxy */ = {
+		D3A9C855202B01690017FB0D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D34F4639201A001600334BDF /* Project object */;
+			containerPortal = D3A9C834202B01690017FB0D /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D34F4640201A001600334BDF;
+			remoteGlobalIDString = D3A9C83B202B01690017FB0D;
 			remoteInfo = TTPageControlDemo;
 		};
-		D34F4665201A001600334BDF /* PBXContainerItemProxy */ = {
+		D3A9C860202B01690017FB0D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D34F4639201A001600334BDF /* Project object */;
+			containerPortal = D3A9C834202B01690017FB0D /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D34F4640201A001600334BDF;
+			remoteGlobalIDString = D3A9C83B202B01690017FB0D;
 			remoteInfo = TTPageControlDemo;
 		};
-		D34F467B201A005A00334BDF /* PBXContainerItemProxy */ = {
+		D3A9C879202B01FD0017FB0D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D34F4676201A005A00334BDF /* TTPageControlKit.xcodeproj */;
+			containerPortal = D3A9C874202B01FD0017FB0D /* TTPageControlKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = D34F46122019FEEC00334BDF;
 			remoteInfo = TTPageControlKit;
 		};
-		D34F467D201A005A00334BDF /* PBXContainerItemProxy */ = {
+		D3A9C87B202B01FD0017FB0D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D34F4676201A005A00334BDF /* TTPageControlKit.xcodeproj */;
+			containerPortal = D3A9C874202B01FD0017FB0D /* TTPageControlKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = D34F461B2019FEEC00334BDF;
 			remoteInfo = TTPageControlKitTests;
@@ -51,44 +51,44 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D34F4641201A001600334BDF /* TTPageControlDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTPageControlDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D34F4644201A001600334BDF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		D34F4645201A001600334BDF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D34F4647201A001600334BDF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D34F4648201A001600334BDF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		D34F464B201A001600334BDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D34F464D201A001600334BDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D34F4650201A001600334BDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D34F4652201A001600334BDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D34F4653201A001600334BDF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D34F4659201A001600334BDF /* TTPageControlDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TTPageControlDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D34F465D201A001600334BDF /* TTPageControlDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTPageControlDemoTests.m; sourceTree = "<group>"; };
-		D34F465F201A001600334BDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D34F4664201A001600334BDF /* TTPageControlDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TTPageControlDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D34F4668201A001600334BDF /* TTPageControlDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTPageControlDemoUITests.m; sourceTree = "<group>"; };
-		D34F466A201A001600334BDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D34F4676201A005A00334BDF /* TTPageControlKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TTPageControlKit.xcodeproj; path = ../../TTPageControlKit/TTPageControlKit.xcodeproj; sourceTree = "<group>"; };
-		D34F4681201A00F000334BDF /* UIColor+CLExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CLExt.m"; sourceTree = "<group>"; };
-		D34F4682201A00F000334BDF /* UIColor+CLExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CLExt.h"; sourceTree = "<group>"; };
+		D3A9C83C202B01690017FB0D /* TTPageControlDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTPageControlDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3A9C83F202B01690017FB0D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D3A9C840202B01690017FB0D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D3A9C842202B01690017FB0D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D3A9C843202B01690017FB0D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D3A9C846202B01690017FB0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D3A9C848202B01690017FB0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D3A9C84B202B01690017FB0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D3A9C84D202B01690017FB0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3A9C84E202B01690017FB0D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D3A9C854202B01690017FB0D /* TTPageControlDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TTPageControlDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3A9C858202B01690017FB0D /* TTPageControlDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTPageControlDemoTests.m; sourceTree = "<group>"; };
+		D3A9C85A202B01690017FB0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3A9C85F202B01690017FB0D /* TTPageControlDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TTPageControlDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3A9C863202B01690017FB0D /* TTPageControlDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTPageControlDemoUITests.m; sourceTree = "<group>"; };
+		D3A9C865202B01690017FB0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3A9C871202B01F10017FB0D /* UIColor+CLExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CLExt.h"; sourceTree = "<group>"; };
+		D3A9C872202B01F10017FB0D /* UIColor+CLExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CLExt.m"; sourceTree = "<group>"; };
+		D3A9C874202B01FD0017FB0D /* TTPageControlKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TTPageControlKit.xcodeproj; path = ../../TTPageControlKit/TTPageControlKit.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D34F463E201A001600334BDF /* Frameworks */ = {
+		D3A9C839202B01690017FB0D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D34F4680201A006400334BDF /* TTPageControlKit.framework in Frameworks */,
+				D3A9C87E202B020D0017FB0D /* TTPageControlKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D34F4656201A001600334BDF /* Frameworks */ = {
+		D3A9C851202B01690017FB0D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D34F4661201A001600334BDF /* Frameworks */ = {
+		D3A9C85C202B01690017FB0D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -98,74 +98,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D34F4638201A001600334BDF = {
+		D3A9C833202B01690017FB0D = {
 			isa = PBXGroup;
 			children = (
-				D34F4643201A001600334BDF /* TTPageControlDemo */,
-				D34F465C201A001600334BDF /* TTPageControlDemoTests */,
-				D34F4667201A001600334BDF /* TTPageControlDemoUITests */,
-				D34F4642201A001600334BDF /* Products */,
-				D34F467F201A006400334BDF /* Frameworks */,
+				D3A9C83E202B01690017FB0D /* TTPageControlDemo */,
+				D3A9C857202B01690017FB0D /* TTPageControlDemoTests */,
+				D3A9C862202B01690017FB0D /* TTPageControlDemoUITests */,
+				D3A9C83D202B01690017FB0D /* Products */,
+				D3A9C87D202B020D0017FB0D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		D34F4642201A001600334BDF /* Products */ = {
+		D3A9C83D202B01690017FB0D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D34F4641201A001600334BDF /* TTPageControlDemo.app */,
-				D34F4659201A001600334BDF /* TTPageControlDemoTests.xctest */,
-				D34F4664201A001600334BDF /* TTPageControlDemoUITests.xctest */,
+				D3A9C83C202B01690017FB0D /* TTPageControlDemo.app */,
+				D3A9C854202B01690017FB0D /* TTPageControlDemoTests.xctest */,
+				D3A9C85F202B01690017FB0D /* TTPageControlDemoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D34F4643201A001600334BDF /* TTPageControlDemo */ = {
+		D3A9C83E202B01690017FB0D /* TTPageControlDemo */ = {
 			isa = PBXGroup;
 			children = (
-				D34F4676201A005A00334BDF /* TTPageControlKit.xcodeproj */,
-				D34F4644201A001600334BDF /* AppDelegate.h */,
-				D34F4645201A001600334BDF /* AppDelegate.m */,
-				D34F4647201A001600334BDF /* ViewController.h */,
-				D34F4648201A001600334BDF /* ViewController.m */,
-				D34F4682201A00F000334BDF /* UIColor+CLExt.h */,
-				D34F4681201A00F000334BDF /* UIColor+CLExt.m */,
-				D34F464A201A001600334BDF /* Main.storyboard */,
-				D34F464D201A001600334BDF /* Assets.xcassets */,
-				D34F464F201A001600334BDF /* LaunchScreen.storyboard */,
-				D34F4652201A001600334BDF /* Info.plist */,
-				D34F4653201A001600334BDF /* main.m */,
+				D3A9C874202B01FD0017FB0D /* TTPageControlKit.xcodeproj */,
+				D3A9C83F202B01690017FB0D /* AppDelegate.h */,
+				D3A9C840202B01690017FB0D /* AppDelegate.m */,
+				D3A9C842202B01690017FB0D /* ViewController.h */,
+				D3A9C843202B01690017FB0D /* ViewController.m */,
+				D3A9C871202B01F10017FB0D /* UIColor+CLExt.h */,
+				D3A9C872202B01F10017FB0D /* UIColor+CLExt.m */,
+				D3A9C845202B01690017FB0D /* Main.storyboard */,
+				D3A9C848202B01690017FB0D /* Assets.xcassets */,
+				D3A9C84A202B01690017FB0D /* LaunchScreen.storyboard */,
+				D3A9C84D202B01690017FB0D /* Info.plist */,
+				D3A9C84E202B01690017FB0D /* main.m */,
 			);
 			path = TTPageControlDemo;
 			sourceTree = "<group>";
 		};
-		D34F465C201A001600334BDF /* TTPageControlDemoTests */ = {
+		D3A9C857202B01690017FB0D /* TTPageControlDemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				D34F465D201A001600334BDF /* TTPageControlDemoTests.m */,
-				D34F465F201A001600334BDF /* Info.plist */,
+				D3A9C858202B01690017FB0D /* TTPageControlDemoTests.m */,
+				D3A9C85A202B01690017FB0D /* Info.plist */,
 			);
 			path = TTPageControlDemoTests;
 			sourceTree = "<group>";
 		};
-		D34F4667201A001600334BDF /* TTPageControlDemoUITests */ = {
+		D3A9C862202B01690017FB0D /* TTPageControlDemoUITests */ = {
 			isa = PBXGroup;
 			children = (
-				D34F4668201A001600334BDF /* TTPageControlDemoUITests.m */,
-				D34F466A201A001600334BDF /* Info.plist */,
+				D3A9C863202B01690017FB0D /* TTPageControlDemoUITests.m */,
+				D3A9C865202B01690017FB0D /* Info.plist */,
 			);
 			path = TTPageControlDemoUITests;
 			sourceTree = "<group>";
 		};
-		D34F4677201A005A00334BDF /* Products */ = {
+		D3A9C875202B01FD0017FB0D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D34F467C201A005A00334BDF /* TTPageControlKit.framework */,
-				D34F467E201A005A00334BDF /* TTPageControlKitTests.xctest */,
+				D3A9C87A202B01FD0017FB0D /* TTPageControlKit.framework */,
+				D3A9C87C202B01FD0017FB0D /* TTPageControlKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D34F467F201A006400334BDF /* Frameworks */ = {
+		D3A9C87D202B020D0017FB0D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -175,13 +175,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D34F4640201A001600334BDF /* TTPageControlDemo */ = {
+		D3A9C83B202B01690017FB0D /* TTPageControlDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D34F466D201A001600334BDF /* Build configuration list for PBXNativeTarget "TTPageControlDemo" */;
+			buildConfigurationList = D3A9C868202B01690017FB0D /* Build configuration list for PBXNativeTarget "TTPageControlDemo" */;
 			buildPhases = (
-				D34F463D201A001600334BDF /* Sources */,
-				D34F463E201A001600334BDF /* Frameworks */,
-				D34F463F201A001600334BDF /* Resources */,
+				D3A9C838202B01690017FB0D /* Sources */,
+				D3A9C839202B01690017FB0D /* Frameworks */,
+				D3A9C83A202B01690017FB0D /* Resources */,
 			);
 			buildRules = (
 			);
@@ -189,71 +189,71 @@
 			);
 			name = TTPageControlDemo;
 			productName = TTPageControlDemo;
-			productReference = D34F4641201A001600334BDF /* TTPageControlDemo.app */;
+			productReference = D3A9C83C202B01690017FB0D /* TTPageControlDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D34F4658201A001600334BDF /* TTPageControlDemoTests */ = {
+		D3A9C853202B01690017FB0D /* TTPageControlDemoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D34F4670201A001600334BDF /* Build configuration list for PBXNativeTarget "TTPageControlDemoTests" */;
+			buildConfigurationList = D3A9C86B202B01690017FB0D /* Build configuration list for PBXNativeTarget "TTPageControlDemoTests" */;
 			buildPhases = (
-				D34F4655201A001600334BDF /* Sources */,
-				D34F4656201A001600334BDF /* Frameworks */,
-				D34F4657201A001600334BDF /* Resources */,
+				D3A9C850202B01690017FB0D /* Sources */,
+				D3A9C851202B01690017FB0D /* Frameworks */,
+				D3A9C852202B01690017FB0D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D34F465B201A001600334BDF /* PBXTargetDependency */,
+				D3A9C856202B01690017FB0D /* PBXTargetDependency */,
 			);
 			name = TTPageControlDemoTests;
 			productName = TTPageControlDemoTests;
-			productReference = D34F4659201A001600334BDF /* TTPageControlDemoTests.xctest */;
+			productReference = D3A9C854202B01690017FB0D /* TTPageControlDemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		D34F4663201A001600334BDF /* TTPageControlDemoUITests */ = {
+		D3A9C85E202B01690017FB0D /* TTPageControlDemoUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D34F4673201A001600334BDF /* Build configuration list for PBXNativeTarget "TTPageControlDemoUITests" */;
+			buildConfigurationList = D3A9C86E202B01690017FB0D /* Build configuration list for PBXNativeTarget "TTPageControlDemoUITests" */;
 			buildPhases = (
-				D34F4660201A001600334BDF /* Sources */,
-				D34F4661201A001600334BDF /* Frameworks */,
-				D34F4662201A001600334BDF /* Resources */,
+				D3A9C85B202B01690017FB0D /* Sources */,
+				D3A9C85C202B01690017FB0D /* Frameworks */,
+				D3A9C85D202B01690017FB0D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D34F4666201A001600334BDF /* PBXTargetDependency */,
+				D3A9C861202B01690017FB0D /* PBXTargetDependency */,
 			);
 			name = TTPageControlDemoUITests;
 			productName = TTPageControlDemoUITests;
-			productReference = D34F4664201A001600334BDF /* TTPageControlDemoUITests.xctest */;
+			productReference = D3A9C85F202B01690017FB0D /* TTPageControlDemoUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D34F4639201A001600334BDF /* Project object */ = {
+		D3A9C834202B01690017FB0D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = ClaudeLi;
 				TargetAttributes = {
-					D34F4640201A001600334BDF = {
+					D3A9C83B202B01690017FB0D = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
 					};
-					D34F4658201A001600334BDF = {
+					D3A9C853202B01690017FB0D = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
-						TestTargetID = D34F4640201A001600334BDF;
+						TestTargetID = D3A9C83B202B01690017FB0D;
 					};
-					D34F4663201A001600334BDF = {
+					D3A9C85E202B01690017FB0D = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
-						TestTargetID = D34F4640201A001600334BDF;
+						TestTargetID = D3A9C83B202B01690017FB0D;
 					};
 				};
 			};
-			buildConfigurationList = D34F463C201A001600334BDF /* Build configuration list for PBXProject "TTPageControlDemo" */;
+			buildConfigurationList = D3A9C837202B01690017FB0D /* Build configuration list for PBXProject "TTPageControlDemo" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -261,60 +261,60 @@
 				en,
 				Base,
 			);
-			mainGroup = D34F4638201A001600334BDF;
-			productRefGroup = D34F4642201A001600334BDF /* Products */;
+			mainGroup = D3A9C833202B01690017FB0D;
+			productRefGroup = D3A9C83D202B01690017FB0D /* Products */;
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = D34F4677201A005A00334BDF /* Products */;
-					ProjectRef = D34F4676201A005A00334BDF /* TTPageControlKit.xcodeproj */;
+					ProductGroup = D3A9C875202B01FD0017FB0D /* Products */;
+					ProjectRef = D3A9C874202B01FD0017FB0D /* TTPageControlKit.xcodeproj */;
 				},
 			);
 			projectRoot = "";
 			targets = (
-				D34F4640201A001600334BDF /* TTPageControlDemo */,
-				D34F4658201A001600334BDF /* TTPageControlDemoTests */,
-				D34F4663201A001600334BDF /* TTPageControlDemoUITests */,
+				D3A9C83B202B01690017FB0D /* TTPageControlDemo */,
+				D3A9C853202B01690017FB0D /* TTPageControlDemoTests */,
+				D3A9C85E202B01690017FB0D /* TTPageControlDemoUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		D34F467C201A005A00334BDF /* TTPageControlKit.framework */ = {
+		D3A9C87A202B01FD0017FB0D /* TTPageControlKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = TTPageControlKit.framework;
-			remoteRef = D34F467B201A005A00334BDF /* PBXContainerItemProxy */;
+			remoteRef = D3A9C879202B01FD0017FB0D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		D34F467E201A005A00334BDF /* TTPageControlKitTests.xctest */ = {
+		D3A9C87C202B01FD0017FB0D /* TTPageControlKitTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = TTPageControlKitTests.xctest;
-			remoteRef = D34F467D201A005A00334BDF /* PBXContainerItemProxy */;
+			remoteRef = D3A9C87B202B01FD0017FB0D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D34F463F201A001600334BDF /* Resources */ = {
+		D3A9C83A202B01690017FB0D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D34F4651201A001600334BDF /* LaunchScreen.storyboard in Resources */,
-				D34F464E201A001600334BDF /* Assets.xcassets in Resources */,
-				D34F464C201A001600334BDF /* Main.storyboard in Resources */,
+				D3A9C84C202B01690017FB0D /* LaunchScreen.storyboard in Resources */,
+				D3A9C849202B01690017FB0D /* Assets.xcassets in Resources */,
+				D3A9C847202B01690017FB0D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D34F4657201A001600334BDF /* Resources */ = {
+		D3A9C852202B01690017FB0D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D34F4662201A001600334BDF /* Resources */ = {
+		D3A9C85D202B01690017FB0D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -324,61 +324,61 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D34F463D201A001600334BDF /* Sources */ = {
+		D3A9C838202B01690017FB0D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D34F4649201A001600334BDF /* ViewController.m in Sources */,
-				D34F4654201A001600334BDF /* main.m in Sources */,
-				D34F4683201A00F000334BDF /* UIColor+CLExt.m in Sources */,
-				D34F4646201A001600334BDF /* AppDelegate.m in Sources */,
+				D3A9C844202B01690017FB0D /* ViewController.m in Sources */,
+				D3A9C84F202B01690017FB0D /* main.m in Sources */,
+				D3A9C873202B01F10017FB0D /* UIColor+CLExt.m in Sources */,
+				D3A9C841202B01690017FB0D /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D34F4655201A001600334BDF /* Sources */ = {
+		D3A9C850202B01690017FB0D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D34F465E201A001600334BDF /* TTPageControlDemoTests.m in Sources */,
+				D3A9C859202B01690017FB0D /* TTPageControlDemoTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D34F4660201A001600334BDF /* Sources */ = {
+		D3A9C85B202B01690017FB0D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D34F4669201A001600334BDF /* TTPageControlDemoUITests.m in Sources */,
+				D3A9C864202B01690017FB0D /* TTPageControlDemoUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D34F465B201A001600334BDF /* PBXTargetDependency */ = {
+		D3A9C856202B01690017FB0D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D34F4640201A001600334BDF /* TTPageControlDemo */;
-			targetProxy = D34F465A201A001600334BDF /* PBXContainerItemProxy */;
+			target = D3A9C83B202B01690017FB0D /* TTPageControlDemo */;
+			targetProxy = D3A9C855202B01690017FB0D /* PBXContainerItemProxy */;
 		};
-		D34F4666201A001600334BDF /* PBXTargetDependency */ = {
+		D3A9C861202B01690017FB0D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D34F4640201A001600334BDF /* TTPageControlDemo */;
-			targetProxy = D34F4665201A001600334BDF /* PBXContainerItemProxy */;
+			target = D3A9C83B202B01690017FB0D /* TTPageControlDemo */;
+			targetProxy = D3A9C860202B01690017FB0D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D34F464A201A001600334BDF /* Main.storyboard */ = {
+		D3A9C845202B01690017FB0D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D34F464B201A001600334BDF /* Base */,
+				D3A9C846202B01690017FB0D /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		D34F464F201A001600334BDF /* LaunchScreen.storyboard */ = {
+		D3A9C84A202B01690017FB0D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D34F4650201A001600334BDF /* Base */,
+				D3A9C84B202B01690017FB0D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -386,7 +386,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		D34F466B201A001600334BDF /* Debug */ = {
+		D3A9C866202B01690017FB0D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -441,7 +441,7 @@
 			};
 			name = Debug;
 		};
-		D34F466C201A001600334BDF /* Release */ = {
+		D3A9C867202B01690017FB0D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -490,80 +490,80 @@
 			};
 			name = Release;
 		};
-		D34F466E201A001600334BDF /* Debug */ = {
+		D3A9C869202B01690017FB0D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TTPageControlDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tiaooo.TTPageControlDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.claudeli.TTPageControlDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		D34F466F201A001600334BDF /* Release */ = {
+		D3A9C86A202B01690017FB0D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TTPageControlDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tiaooo.TTPageControlDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.claudeli.TTPageControlDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		D34F4671201A001600334BDF /* Debug */ = {
+		D3A9C86C202B01690017FB0D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TTPageControlDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tiaooo.TTPageControlDemoTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.claudeli.TTPageControlDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TTPageControlDemo.app/TTPageControlDemo";
 			};
 			name = Debug;
 		};
-		D34F4672201A001600334BDF /* Release */ = {
+		D3A9C86D202B01690017FB0D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TTPageControlDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tiaooo.TTPageControlDemoTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.claudeli.TTPageControlDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TTPageControlDemo.app/TTPageControlDemo";
 			};
 			name = Release;
 		};
-		D34F4674201A001600334BDF /* Debug */ = {
+		D3A9C86F202B01690017FB0D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TTPageControlDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tiaooo.TTPageControlDemoUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.claudeli.TTPageControlDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = TTPageControlDemo;
 			};
 			name = Debug;
 		};
-		D34F4675201A001600334BDF /* Release */ = {
+		D3A9C870202B01690017FB0D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TTPageControlDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tiaooo.TTPageControlDemoUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.claudeli.TTPageControlDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = TTPageControlDemo;
@@ -573,43 +573,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D34F463C201A001600334BDF /* Build configuration list for PBXProject "TTPageControlDemo" */ = {
+		D3A9C837202B01690017FB0D /* Build configuration list for PBXProject "TTPageControlDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D34F466B201A001600334BDF /* Debug */,
-				D34F466C201A001600334BDF /* Release */,
+				D3A9C866202B01690017FB0D /* Debug */,
+				D3A9C867202B01690017FB0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D34F466D201A001600334BDF /* Build configuration list for PBXNativeTarget "TTPageControlDemo" */ = {
+		D3A9C868202B01690017FB0D /* Build configuration list for PBXNativeTarget "TTPageControlDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D34F466E201A001600334BDF /* Debug */,
-				D34F466F201A001600334BDF /* Release */,
+				D3A9C869202B01690017FB0D /* Debug */,
+				D3A9C86A202B01690017FB0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D34F4670201A001600334BDF /* Build configuration list for PBXNativeTarget "TTPageControlDemoTests" */ = {
+		D3A9C86B202B01690017FB0D /* Build configuration list for PBXNativeTarget "TTPageControlDemoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D34F4671201A001600334BDF /* Debug */,
-				D34F4672201A001600334BDF /* Release */,
+				D3A9C86C202B01690017FB0D /* Debug */,
+				D3A9C86D202B01690017FB0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D34F4673201A001600334BDF /* Build configuration list for PBXNativeTarget "TTPageControlDemoUITests" */ = {
+		D3A9C86E202B01690017FB0D /* Build configuration list for PBXNativeTarget "TTPageControlDemoUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D34F4674201A001600334BDF /* Debug */,
-				D34F4675201A001600334BDF /* Release */,
+				D3A9C86F202B01690017FB0D /* Debug */,
+				D3A9C870202B01690017FB0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D34F4639201A001600334BDF /* Project object */;
+	rootObject = D3A9C834202B01690017FB0D /* Project object */;
 }

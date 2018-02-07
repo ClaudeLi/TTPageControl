@@ -2,7 +2,7 @@
 //  AppDelegate.h
 //  TTPageControlDemo
 //
-//  Created by ClaudeLi on 2018/1/25.
+//  Created by ClaudeLi on 2018/2/7.
 //  Copyright © 2018年 ClaudeLi. All rights reserved.
 //
 

@@ -68,7 +68,7 @@
 				D34F46142019FEEC00334BDF /* TTPageControlKit */,
 				D34F461F2019FEEC00334BDF /* TTPageControlKitTests */,
 				D34F46132019FEEC00334BDF /* Products */,
-			);
+            );
 			sourceTree = "<group>";
 		};
 		D34F46132019FEEC00334BDF /* Products */ = {

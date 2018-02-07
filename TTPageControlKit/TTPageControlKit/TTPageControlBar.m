@@ -65,6 +65,7 @@ static NSString *itemIdentifier = @"TTPageControlCellIdentifier";
     self.lineSize = CGSizeMake(8, 3);
     self.allowScrollToCenter = YES;
     _currentIndex = -1;
+    _allowShowLineView = YES;
 }
 
 #pragma mark -
@@ -107,6 +108,7 @@ static NSString *itemIdentifier = @"TTPageControlCellIdentifier";
         _lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, _lineSize.width, _lineSize.height)];
         _lineView.backgroundColor = [UIColor blackColor];
         _lineView.center = CGPointZero;
+        _lineView.hidden = YES;
         [self addSubview:_lineView];
     }
     return _lineView;
@@ -192,70 +194,76 @@ static NSString *itemIdentifier = @"TTPageControlCellIdentifier";
 
 - (void)setScrollScale:(CGFloat)scrollScale{
     _scrollScale = scrollScale;
-    if (_scrollScale >= 1.0 || _scrollScale <=-1.0) {
-        CGRect f = self.lineView.frame;
-        f.size = _lineSize;
-        self.lineView.frame = f;
-        [self scrollToIndex:_scrollingPage];
-    }else if (_scrollScale > 0) {
-        if (_currentIndex>=_layoutArray.count-1) {
-            return;
+    @autoreleasepool {
+        if (_scrollScale >= 1.0 || _scrollScale <=-1.0) {
+            CGRect f = self.lineView.frame;
+            f.size = _lineSize;
+            self.lineView.frame = f;
+            [self scrollToIndex:_scrollingPage];
+        }else if (_scrollScale > 0) {
+            if (_currentIndex>=_layoutArray.count-1) {
+                return;
+            }
+            TTPageControlCell *cell = (TTPageControlCell *)[self cellForItemAtIndexPath:[NSIndexPath indexPathForRow:_currentIndex inSection:0]];
+            if (!cell) {
+                return;
+            }
+            TTPageControlCell *nextCell = (TTPageControlCell *)[self cellForItemAtIndexPath:[NSIndexPath indexPathForRow:_currentIndex+1 inSection:0]];
+            if (!nextCell) {
+                return;
+            }
+            // 颜色渐变处理
+            cell.titleLabel.textColor = [self getColorWithScale:_scrollScale
+                                                           base:_highlightRGBA
+                                                        changed:self.changedNormal];
+            nextCell.titleLabel.textColor = [self getColorWithScale:_scrollScale
+                                                               base:_normalRGBA
+                                                            changed:self.changedHighlight];
+            // line 渐变处理
+            CGFloat maxWidth = nextCell.center.x - cell.center.x;
+            CGFloat showWidth = _scrollScale* 2.0 * (maxWidth-_lineSize.width)+_lineSize.width;
+            if (_scrollScale > 0.5) {
+                showWidth = (1 -_scrollScale)* 2.0 * (maxWidth-_lineSize.width)+_lineSize.width;
+            }
+            CGRect f = self.lineView.frame;
+            f.size = CGSizeMake(showWidth, _lineSize.height);
+            self.lineView.frame = f;
+            self.lineView.center = CGPointMake(cell.center.x + maxWidth*_scrollScale, _lineCenter.y);
+        }else if (_scrollScale < 0){
+            if (_currentIndex<=0) {
+                return;
+            }
+            TTPageControlCell *cell = (TTPageControlCell *)[self cellForItemAtIndexPath:[NSIndexPath indexPathForRow:_currentIndex inSection:0]];
+            if (!cell) {
+                return;
+            }
+            TTPageControlCell *nextCell = (TTPageControlCell *)[self cellForItemAtIndexPath:[NSIndexPath indexPathForRow:_currentIndex-1 inSection:0]];
+            if (!nextCell) {
+                return;
+            }
+            // 颜色渐变处理
+            cell.titleLabel.textColor = [self getColorWithScale:-_scrollScale
+                                                           base:_highlightRGBA
+                                                        changed:self.changedNormal];
+            nextCell.titleLabel.textColor = [self getColorWithScale:-_scrollScale
+                                                               base:_normalRGBA
+                                                            changed:self.changedHighlight];
+            // line 渐变处理
+            CGFloat maxWidth = cell.center.x - nextCell.center.x;
+            CGFloat showWidth = _scrollScale *-2.0 * (maxWidth-_lineSize.width)+_lineSize.width;
+            if (_scrollScale < -0.5) {
+                showWidth = (1 +_scrollScale)* 2.0 * (maxWidth-_lineSize.width)+_lineSize.width;
+            }
+            CGRect f = self.lineView.frame;
+            f.size = CGSizeMake(showWidth, _lineSize.height);
+            self.lineView.frame = f;
+            self.lineView.center = CGPointMake(cell.center.x + maxWidth*_scrollScale, _lineCenter.y);
+        }else{
+            CGRect f = self.lineView.frame;
+            f.size = _lineSize;
+            self.lineView.frame = f;
+            _lineCenter = self.lineView.center;
         }
-        TTPageControlCell *cell = (TTPageControlCell *)[self cellForItemAtIndexPath:[NSIndexPath indexPathForRow:_currentIndex inSection:0]];
-        if (!cell) {
-            return;
-        }
-        cell.titleLabel.textColor = [self getColorWithScale:_scrollScale
-                                                       base:_highlightRGBA
-                                                    changed:self.changedNormal];
-        TTPageControlCell *nextCell = (TTPageControlCell *)[self cellForItemAtIndexPath:[NSIndexPath indexPathForRow:_currentIndex+1 inSection:0]];
-        if (!nextCell) {
-            return;
-        }
-        nextCell.titleLabel.textColor = [self getColorWithScale:_scrollScale
-                                                           base:_normalRGBA
-                                                        changed:self.changedHighlight];
-        CGFloat maxWidth = nextCell.center.x - cell.center.x;
-        CGFloat showWidth = _scrollScale* 2.0 * (maxWidth-_lineSize.width)+_lineSize.width;
-        if (_scrollScale > 0.5) {
-            showWidth = (1 -_scrollScale)* 2.0 * (maxWidth-_lineSize.width)+_lineSize.width;
-        }
-        CGRect f = self.lineView.frame;
-        f.size = CGSizeMake(showWidth, _lineSize.height);
-        self.lineView.frame = f;
-        self.lineView.center = CGPointMake(cell.center.x + maxWidth*_scrollScale, _lineCenter.y);
-    }else if (_scrollScale < 0){
-        if (_currentIndex<=0) {
-            return;
-        }
-        TTPageControlCell *cell = (TTPageControlCell *)[self cellForItemAtIndexPath:[NSIndexPath indexPathForRow:_currentIndex inSection:0]];
-        if (!cell) {
-            return;
-        }
-        cell.titleLabel.textColor = [self getColorWithScale:-_scrollScale
-                                                       base:_highlightRGBA
-                                                    changed:self.changedNormal];
-        TTPageControlCell *nextCell = (TTPageControlCell *)[self cellForItemAtIndexPath:[NSIndexPath indexPathForRow:_currentIndex-1 inSection:0]];
-        if (!nextCell) {
-            return;
-        }
-        nextCell.titleLabel.textColor = [self getColorWithScale:-_scrollScale
-                                                           base:_normalRGBA
-                                                        changed:self.changedHighlight];
-        CGFloat maxWidth = cell.center.x - nextCell.center.x;
-        CGFloat showWidth = _scrollScale *-2.0 * (maxWidth-_lineSize.width)+_lineSize.width;
-        if (_scrollScale < -0.5) {
-            showWidth = (1 +_scrollScale)* 2.0 * (maxWidth-_lineSize.width)+_lineSize.width;
-        }
-        CGRect f = self.lineView.frame;
-        f.size = CGSizeMake(showWidth, _lineSize.height);
-        self.lineView.frame = f;
-        self.lineView.center = CGPointMake(cell.center.x + maxWidth*_scrollScale, _lineCenter.y);
-    }else{
-        CGRect f = self.lineView.frame;
-        f.size = _lineSize;
-        self.lineView.frame = f;
-        _lineCenter = self.lineView.center;
     }
 }
 
@@ -292,25 +300,30 @@ static NSString *itemIdentifier = @"TTPageControlCellIdentifier";
 }
 
 - (void)scrollToCenterWithCell:(TTPageControlCell *)cell{
-    _isScrolled = YES;
-    CGFloat x =  cell.frame.origin.x;
-    CGFloat width = self.bounds.size.width;
-    CGFloat contentWidth = self.contentSize.width;
-    if (x < width/2.0) {
-        [self setContentOffset:CGPointMake(0, 0) animated:YES];
-    }else if ((contentWidth - x - self.contentInset.right - _flowLayout.sectionInset.right) < width/2.0){
-        [self setContentOffset:CGPointMake((contentWidth - width), 0) animated:YES];
-    }else{
-        CGFloat offset = x - width/2.0 + cell.frame.size.width/2.0;
-        [self setContentOffset:CGPointMake(offset, 0) animated:YES];
-    }
-    _lineCenter = CGPointMake(cell.center.x, self.bounds.size.height - _flowLayout.sectionInset.bottom-self.lineSize.height/2.0);
-    if (CGPointEqualToPoint(CGPointZero, self.lineView.center)) {
-        self.lineView.center = _lineCenter;
-    }else{
-        [UIView animateWithDuration:0.2 animations:^{
-            self.lineView.center = _lineCenter;
-        }];
+    @autoreleasepool {
+        _isScrolled = YES;
+        CGFloat x =  cell.frame.origin.x;
+        CGFloat width = self.bounds.size.width;
+        CGFloat contentWidth = self.contentSize.width;
+        if (x < width/2.0) {
+            [self setContentOffset:CGPointMake(0, 0) animated:YES];
+        }else if ((contentWidth - x - self.contentInset.right - _flowLayout.sectionInset.right) < width/2.0){
+            [self setContentOffset:CGPointMake((contentWidth - width), 0) animated:YES];
+        }else{
+            CGFloat offset = x - width/2.0 + cell.frame.size.width/2.0;
+            [self setContentOffset:CGPointMake(offset, 0) animated:YES];
+        }
+        _lineCenter = CGPointMake(cell.center.x, self.bounds.size.height - _flowLayout.sectionInset.bottom-self.lineSize.height/2.0);
+        if (CGPointEqualToPoint(CGPointZero, self.lineView.center)) {
+            if (_allowShowLineView) {
+                self.lineView.hidden = NO;
+                self.lineView.center = _lineCenter;
+            }
+        }else{
+            [UIView animateWithDuration:0.2 animations:^{
+                self.lineView.center = _lineCenter;
+            }];
+        }
     }
 }
 

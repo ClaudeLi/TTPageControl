@@ -29,6 +29,7 @@
  */
 @property (nonatomic, strong) UIView    *lineView;
 @property (nonatomic, assign) CGSize    lineSize;
+@property (nonatomic, assign) BOOL      allowShowLineView;      // default YES
 
 @property (nonatomic, assign) NSInteger scrollingPage;
 @property (nonatomic, assign) CGFloat   scrollScale;            //  rang (-1, 1)
