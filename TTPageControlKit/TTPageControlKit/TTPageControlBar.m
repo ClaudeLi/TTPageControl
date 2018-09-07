@@ -31,15 +31,15 @@ static NSString *itemIdentifier = @"TTPageControlCellIdentifier";
 
 #pragma mark -
 #pragma mark -- Initial Methods --
-- (instancetype)initWithFrame:(CGRect)frame{
-    _flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    _flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    self = [super initWithFrame:frame collectionViewLayout:_flowLayout];
-    if (self) {
-        [self _setUp];
-    }
-    return self;
-}
+//- (instancetype)initWithFrame:(CGRect)frame{
+//    _flowLayout = [[UICollectionViewFlowLayout alloc] init];
+//    _flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+//    self = [super initWithFrame:frame collectionViewLayout:_flowLayout];
+//    if (self) {
+//        [self _setUp];
+//    }
+//    return self;
+//}
 
 - (instancetype)initWithFrame:(CGRect)frame collectionViewLayout:(UICollectionViewLayout *)layout{
     _flowLayout = (UICollectionViewFlowLayout *)layout;
@@ -62,7 +62,7 @@ static NSString *itemIdentifier = @"TTPageControlCellIdentifier";
     self.normalFont = self.highlightFont = [UIFont systemFontOfSize:16];
     self.normalColor = [UIColor lightGrayColor];
     self.highlightColor = [UIColor blackColor];
-    self.lineSize = CGSizeMake(8, 3);
+    self.lineSize = CGSizeMake(12, 3);
     self.allowScrollToCenter = YES;
     _currentIndex = -1;
     _allowShowLineView = YES;
@@ -71,6 +71,8 @@ static NSString *itemIdentifier = @"TTPageControlCellIdentifier";
 #pragma mark -
 #pragma mark -- set --
 - (void)setModelArray:(NSArray<TTPageControlModel *> *)modelArray{
+    _modelArray = modelArray;
+    _currentIndex = -1;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [_layoutArray removeAllObjects];
         for (TTPageControlModel *m in modelArray) {
@@ -161,9 +163,7 @@ static NSString *itemIdentifier = @"TTPageControlCellIdentifier";
         item.isSelect = YES;
         [self selectItemAtIndexPath:indexPath animated:NO scrollPosition:UICollectionViewScrollPositionNone];
         if (!_isScrolled) {
-            if (_allowScrollToCenter) {
-                [self scrollToCenterWithCell:item];
-            }
+            [self scrollToCenterWithCell:item];
         }
     }else{
         item.isSelect = NO;
@@ -204,11 +204,11 @@ static NSString *itemIdentifier = @"TTPageControlCellIdentifier";
             if (_currentIndex>=_layoutArray.count-1) {
                 return;
             }
-            TTPageControlCell *cell = (TTPageControlCell *)[self cellForItemAtIndexPath:[NSIndexPath indexPathForRow:_currentIndex inSection:0]];
+            TTPageControlCell *cell = (TTPageControlCell *)[self cellForItemAtIndexPath:[NSIndexPath indexPathForItem:_currentIndex inSection:0]];
             if (!cell) {
                 return;
             }
-            TTPageControlCell *nextCell = (TTPageControlCell *)[self cellForItemAtIndexPath:[NSIndexPath indexPathForRow:_currentIndex+1 inSection:0]];
+            TTPageControlCell *nextCell = (TTPageControlCell *)[self cellForItemAtIndexPath:[NSIndexPath indexPathForItem:_currentIndex+1 inSection:0]];
             if (!nextCell) {
                 return;
             }
@@ -219,6 +219,8 @@ static NSString *itemIdentifier = @"TTPageControlCellIdentifier";
             nextCell.titleLabel.textColor = [self getColorWithScale:_scrollScale
                                                                base:_normalRGBA
                                                             changed:self.changedHighlight];
+            cell.titleLabel.font = [UIFont fontWithName:_highlightFont.fontName size:_highlightFont.pointSize -(_highlightFont.pointSize - _normalFont.pointSize)*_scrollScale];
+            nextCell.titleLabel.font = [UIFont fontWithName:_highlightFont.fontName size:(_highlightFont.pointSize - _normalFont.pointSize)*_scrollScale+_normalFont.pointSize];
             // line 渐变处理
             CGFloat maxWidth = nextCell.center.x - cell.center.x;
             CGFloat showWidth = _scrollScale* 2.0 * (maxWidth-_lineSize.width)+_lineSize.width;
@@ -233,11 +235,11 @@ static NSString *itemIdentifier = @"TTPageControlCellIdentifier";
             if (_currentIndex<=0) {
                 return;
             }
-            TTPageControlCell *cell = (TTPageControlCell *)[self cellForItemAtIndexPath:[NSIndexPath indexPathForRow:_currentIndex inSection:0]];
+            TTPageControlCell *cell = (TTPageControlCell *)[self cellForItemAtIndexPath:[NSIndexPath indexPathForItem:_currentIndex inSection:0]];
             if (!cell) {
                 return;
             }
-            TTPageControlCell *nextCell = (TTPageControlCell *)[self cellForItemAtIndexPath:[NSIndexPath indexPathForRow:_currentIndex-1 inSection:0]];
+            TTPageControlCell *nextCell = (TTPageControlCell *)[self cellForItemAtIndexPath:[NSIndexPath indexPathForItem:_currentIndex-1 inSection:0]];
             if (!nextCell) {
                 return;
             }
@@ -248,6 +250,8 @@ static NSString *itemIdentifier = @"TTPageControlCellIdentifier";
             nextCell.titleLabel.textColor = [self getColorWithScale:-_scrollScale
                                                                base:_normalRGBA
                                                             changed:self.changedHighlight];
+            cell.titleLabel.font = [UIFont fontWithName:_highlightFont.fontName size:_highlightFont.pointSize -(_highlightFont.pointSize - _normalFont.pointSize)*(-_scrollScale)];
+            nextCell.titleLabel.font = [UIFont fontWithName:_highlightFont.fontName size:(_highlightFont.pointSize - _normalFont.pointSize)*(-_scrollScale)+_normalFont.pointSize];
             // line 渐变处理
             CGFloat maxWidth = cell.center.x - nextCell.center.x;
             CGFloat showWidth = _scrollScale *-2.0 * (maxWidth-_lineSize.width)+_lineSize.width;
@@ -273,27 +277,34 @@ static NSString *itemIdentifier = @"TTPageControlCellIdentifier";
             NSLog(@"current Row Not Changed");
             return;
         }else{
-            TTPageControlCell *lastItem = (TTPageControlCell *)[self cellForItemAtIndexPath:[NSIndexPath indexPathForRow:_currentIndex inSection:0]];
+            TTPageControlCell *lastItem = (TTPageControlCell *)[self cellForItemAtIndexPath:[NSIndexPath indexPathForItem:_currentIndex inSection:0]];
             if (lastItem) {
                 lastItem.isSelect = NO;
             }
             _currentIndex = index;
         }
-        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
+        NSIndexPath *indexPath = [NSIndexPath indexPathForItem:index inSection:0];
         TTPageControlCell *item = (TTPageControlCell *)[self cellForItemAtIndexPath:indexPath];
         if (item) {
+            if (item.layout.model.dot_status) {
+                item.dotView.hidden = YES;
+            }
             item.isSelect = YES;
-            [self selectItemAtIndexPath:indexPath animated:NO scrollPosition:UICollectionViewScrollPositionNone];
+            if (indexPath.row < [self numberOfItemsInSection:0]) {
+                [self selectItemAtIndexPath:indexPath animated:NO scrollPosition:UICollectionViewScrollPositionNone];
+            }
         }
         if (self.didSelectedItemBlock) {
             self.didSelectedItemBlock(index, _modelArray[index]);
         }
-        if (_allowScrollToCenter) {
-            if (item) {
-                [self scrollToCenterWithCell:item];
-            }else{
+        if (item) {
+            [self scrollToCenterWithCell:item];
+        }else{
+            if (_allowScrollToCenter) {
                 _isScrolled = NO;
-                [self scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionNone animated:YES];
+                if (indexPath.row < [self numberOfItemsInSection:0]) {
+                    [self scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionNone animated:YES];
+                }
             }
         }
     }
@@ -302,16 +313,18 @@ static NSString *itemIdentifier = @"TTPageControlCellIdentifier";
 - (void)scrollToCenterWithCell:(TTPageControlCell *)cell{
     @autoreleasepool {
         _isScrolled = YES;
-        CGFloat x =  cell.frame.origin.x;
-        CGFloat width = self.bounds.size.width;
-        CGFloat contentWidth = self.contentSize.width;
-        if (x < width/2.0) {
-            [self setContentOffset:CGPointMake(0, 0) animated:YES];
-        }else if ((contentWidth - x - self.contentInset.right - _flowLayout.sectionInset.right) < width/2.0){
-            [self setContentOffset:CGPointMake((contentWidth - width), 0) animated:YES];
-        }else{
-            CGFloat offset = x - width/2.0 + cell.frame.size.width/2.0;
-            [self setContentOffset:CGPointMake(offset, 0) animated:YES];
+        if (_allowScrollToCenter) {
+            CGFloat x =  cell.frame.origin.x;
+            CGFloat width = self.bounds.size.width;
+            CGFloat contentWidth = self.contentSize.width;
+            if (x < width/2.0) {
+                [self setContentOffset:CGPointMake(0, 0) animated:YES];
+            }else if ((contentWidth - x - self.contentInset.right - _flowLayout.sectionInset.right) < width/2.0){
+                [self setContentOffset:CGPointMake((contentWidth - width), 0) animated:YES];
+            }else{
+                CGFloat offset = x - width/2.0 + cell.frame.size.width/2.0;
+                [self setContentOffset:CGPointMake(offset, 0) animated:YES];
+            }
         }
         _lineCenter = CGPointMake(cell.center.x, self.bounds.size.height - _flowLayout.sectionInset.bottom-self.lineSize.height/2.0);
         if (CGPointEqualToPoint(CGPointZero, self.lineView.center)) {

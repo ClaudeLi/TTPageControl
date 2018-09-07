@@ -25,7 +25,7 @@
 
 /**
  if  lineSize.width == 0, width is equal to the title width
- default : CGSizeMake(8, 3)
+ default : CGSizeMake(12, 3)
  */
 @property (nonatomic, strong) UIView    *lineView;
 @property (nonatomic, assign) CGSize    lineSize;

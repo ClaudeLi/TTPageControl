@@ -22,9 +22,20 @@
     return _titleLabel;
 }
 
+- (UIImageView *)dotView{
+    if (!_dotView) {
+        _dotView = [UIImageView new];
+        _dotView.frame = CGRectMake(self.bounds.size.width-4, 0, 6, 6);
+        _dotView.image = [UIImage imageNamed:@"icon_tabbar_news_red"];
+        [self.contentView addSubview:_dotView];
+    }
+    return _dotView;
+}
+
 - (void)layoutSubviews{
     [super layoutSubviews];
     _titleLabel.frame = self.bounds;
+    _dotView.frame = CGRectMake(self.bounds.size.width-4, 0, 6, 6);
 }
 
 - (void)setLayout:(TTPageControlLayout *)layout{
@@ -33,6 +44,11 @@
     }
     _layout = layout;
     self.titleLabel.text = _layout.model.title;
+    if (_layout.model.dot_status) {
+        self.dotView.hidden = NO;
+    }else{
+        _dotView.hidden = YES;
+    }
 }
 
 - (void)setIsSelect:(BOOL)isSelect{

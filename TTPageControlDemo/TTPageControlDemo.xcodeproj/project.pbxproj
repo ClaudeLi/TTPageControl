@@ -17,6 +17,7 @@
 		D3A9C864202B01690017FB0D /* TTPageControlDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A9C863202B01690017FB0D /* TTPageControlDemoUITests.m */; };
 		D3A9C873202B01F10017FB0D /* UIColor+CLExt.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A9C872202B01F10017FB0D /* UIColor+CLExt.m */; };
 		D3A9C87E202B020D0017FB0D /* TTPageControlKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3A9C87A202B01FD0017FB0D /* TTPageControlKit.framework */; };
+		D3A9C887202B07880017FB0D /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A9C886202B07880017FB0D /* YYFPSLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,8 @@
 		D3A9C871202B01F10017FB0D /* UIColor+CLExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CLExt.h"; sourceTree = "<group>"; };
 		D3A9C872202B01F10017FB0D /* UIColor+CLExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CLExt.m"; sourceTree = "<group>"; };
 		D3A9C874202B01FD0017FB0D /* TTPageControlKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TTPageControlKit.xcodeproj; path = ../../TTPageControlKit/TTPageControlKit.xcodeproj; sourceTree = "<group>"; };
+		D3A9C883202B07880017FB0D /* YYFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFPSLabel.h; sourceTree = "<group>"; };
+		D3A9C886202B07880017FB0D /* YYFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFPSLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +130,8 @@
 				D3A9C840202B01690017FB0D /* AppDelegate.m */,
 				D3A9C842202B01690017FB0D /* ViewController.h */,
 				D3A9C843202B01690017FB0D /* ViewController.m */,
+				D3A9C883202B07880017FB0D /* YYFPSLabel.h */,
+				D3A9C886202B07880017FB0D /* YYFPSLabel.m */,
 				D3A9C871202B01F10017FB0D /* UIColor+CLExt.h */,
 				D3A9C872202B01F10017FB0D /* UIColor+CLExt.m */,
 				D3A9C845202B01690017FB0D /* Main.storyboard */,
@@ -329,6 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3A9C844202B01690017FB0D /* ViewController.m in Sources */,
+				D3A9C887202B07880017FB0D /* YYFPSLabel.m in Sources */,
 				D3A9C84F202B01690017FB0D /* main.m in Sources */,
 				D3A9C873202B01F10017FB0D /* UIColor+CLExt.m in Sources */,
 				D3A9C841202B01690017FB0D /* AppDelegate.m in Sources */,

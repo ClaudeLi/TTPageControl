@@ -41,7 +41,9 @@
         if (_model.title) {
             @try {
                 // +4个像素防止加载文字显示不全
-                _titleWidth = [[NSMutableAttributedString alloc] initWithString:_model.title attributes:@{NSFontAttributeName:_highlightFont}].size.width + 4;
+                _normalAttStr = [[NSMutableAttributedString alloc] initWithString:_model.title attributes:@{NSFontAttributeName:_normalFont, NSForegroundColorAttributeName:_normalColor}];
+                _highlightAttStr = [[NSMutableAttributedString alloc] initWithString:_model.title attributes:@{NSFontAttributeName:_highlightFont, NSForegroundColorAttributeName:_highlightColor}];
+                _titleWidth = MAX(_normalAttStr.size.width, _highlightAttStr.size.width) + 4;
             } @catch (NSException *exception) {
                 _titleWidth = TTPageControldefaultTitleWidth;
             } @finally {

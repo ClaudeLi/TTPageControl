@@ -11,7 +11,8 @@
 @class TTPageControlLayout;
 @interface TTPageControlCell : UICollectionViewCell
 
-@property (nonatomic, strong) UILabel *titleLabel;
+@property (nonatomic, strong) UILabel       *titleLabel;
+@property (nonatomic, strong) UIImageView   *dotView;
 
 @property (nonatomic, strong) TTPageControlLayout *layout;
 

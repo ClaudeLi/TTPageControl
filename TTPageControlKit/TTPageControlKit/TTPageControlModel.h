@@ -13,6 +13,8 @@
 
 @property (nonatomic, copy) NSString *title;
 
+@property (nonatomic, assign) BOOL dot_status;
+
 @end
 
 static CGFloat  TTPageControldefaultTitleWidth = 40.0f;
@@ -25,6 +27,9 @@ static CGFloat  TTPageControldefaultTitleWidth = 40.0f;
 @property (nonatomic, strong) UIFont *highlightFont;
 @property (nonatomic, strong) UIColor *normalColor;
 @property (nonatomic, strong) UIColor *highlightColor;
+
+@property (nonatomic, strong) NSAttributedString *normalAttStr;
+@property (nonatomic, strong) NSAttributedString *highlightAttStr;
 
 - (instancetype)initWithModel:(TTPageControlModel *)model
                    normalFont:(UIFont *)normalFont
