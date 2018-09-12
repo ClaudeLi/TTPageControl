@@ -16,7 +16,8 @@
         _titleLabel = [UILabel new];
         _titleLabel.textAlignment = NSTextAlignmentCenter;
         _titleLabel.textColor = _layout.normalColor;
-        _titleLabel.font = _layout.normalFont;
+        _titleLabel.font = _layout.maxFont;  // 以大字体为默认字体，避免缩放模糊
+        _titleLabel.transform = CGAffineTransformMakeScale(_layout.scale, _layout.scale);
         [self.contentView addSubview:_titleLabel];
     }
     return _titleLabel;
@@ -54,10 +55,17 @@
 - (void)setIsSelect:(BOOL)isSelect{
     if (isSelect) {
         _titleLabel.textColor = _layout.highlightColor;
-        _titleLabel.font = _layout.highlightFont;
+        _titleLabel.transform = CGAffineTransformMakeScale(1, 1);
     }else{
         _titleLabel.textColor = _layout.normalColor;
-        _titleLabel.font = _layout.normalFont;
+        _titleLabel.transform = CGAffineTransformMakeScale(_layout.scale, _layout.scale);
+    }
+}
+
+- (void)setScale:(CGFloat)scale{
+    if (_scale != scale) {
+        _scale = scale;
+        _titleLabel.transform = CGAffineTransformMakeScale(_layout.scale*_scale, _layout.scale*_scale);
     }
 }
 

@@ -25,15 +25,20 @@ static CGFloat  TTPageControldefaultTitleWidth = 40.0f;
 
 @property (nonatomic, strong) UIFont *normalFont;
 @property (nonatomic, strong) UIFont *highlightFont;
+@property (nonatomic, assign) CGFloat normalFontSize;
+@property (nonatomic, assign) CGFloat highlightFontSize;
+
+@property (nonatomic, assign) CGFloat highlightScale;
+
 @property (nonatomic, strong) UIColor *normalColor;
 @property (nonatomic, strong) UIColor *highlightColor;
 
-@property (nonatomic, strong) NSAttributedString *normalAttStr;
-@property (nonatomic, strong) NSAttributedString *highlightAttStr;
+@property (nonatomic, strong) UIFont *maxFont;
+@property (nonatomic, assign) CGFloat scale;
 
 - (instancetype)initWithModel:(TTPageControlModel *)model
                    normalFont:(UIFont *)normalFont
-                highlightFont:(UIFont *)highlightFont
+               highlightScale:(CGFloat)highlightScale
                   normalColor:(UIColor *)normalColor
                highlightColor:(UIColor *)highlightColor;
 

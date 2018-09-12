@@ -16,16 +16,34 @@
 @property (nonatomic, assign) NSInteger defaultIndex;
 @property (nonatomic, strong) NSArray <TTPageControlModel *>*modelArray;
 
+/**
+ default [UIFont systemFontOfSize:16]
+ */
 @property (nonatomic, strong) UIFont    *normalFont;
-@property (nonatomic, strong) UIFont    *highlightFont;
+
+/**
+ default 16.0f
+ */
+@property (nonatomic, assign) CGFloat    highlightFontSize;
+
+/**
+ default [UIColor lightGrayColor]
+ */
 @property (nonatomic, strong) UIColor   *normalColor;
+
+/**
+ default [UIColor blackColor]
+ */
 @property (nonatomic, strong) UIColor   *highlightColor;
 
-@property (nonatomic, assign) BOOL      allowScrollToCenter;    // default YES
+/**
+ allow scroll to the bar's center, default YES
+ */
+@property (nonatomic, assign) BOOL      allowScrollToCenter;
 
 /**
  if  lineSize.width == 0, width is equal to the title width
- default : CGSizeMake(12, 3)
+ default : CGSizeMake(8, 3)
  */
 @property (nonatomic, strong) UIView    *lineView;
 @property (nonatomic, assign) CGSize    lineSize;

@@ -16,6 +16,9 @@
 
 @property (nonatomic, strong) TTPageControlLayout *layout;
 
-@property (nonatomic, assign) BOOL isSelect;
+@property (nonatomic, assign) BOOL          isSelect;
+@property (nonatomic, assign) CGFloat       scale;
+
+
 
 @end

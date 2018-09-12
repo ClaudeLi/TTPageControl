@@ -17,6 +17,7 @@ static NSString *itemIdentifier = @"TTPageControlCellIdentifier";
     CGPoint                     _lineCenter;
     NSArray                     *_normalRGBA;
     NSArray                     *_highlightRGBA;
+    CGFloat                     _highlightScale;
 }
 
 @property (nonatomic, strong) NSMutableArray *layoutArray;
@@ -31,15 +32,15 @@ static NSString *itemIdentifier = @"TTPageControlCellIdentifier";
 
 #pragma mark -
 #pragma mark -- Initial Methods --
-//- (instancetype)initWithFrame:(CGRect)frame{
-//    _flowLayout = [[UICollectionViewFlowLayout alloc] init];
-//    _flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-//    self = [super initWithFrame:frame collectionViewLayout:_flowLayout];
-//    if (self) {
-//        [self _setUp];
-//    }
-//    return self;
-//}
+- (instancetype)initWithFrame:(CGRect)frame{
+    _flowLayout = [[UICollectionViewFlowLayout alloc] init];
+    _flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    self = [super initWithFrame:frame collectionViewLayout:_flowLayout];
+    if (self) {
+        [self _setUp];
+    }
+    return self;
+}
 
 - (instancetype)initWithFrame:(CGRect)frame collectionViewLayout:(UICollectionViewLayout *)layout{
     _flowLayout = (UICollectionViewFlowLayout *)layout;
@@ -59,7 +60,8 @@ static NSString *itemIdentifier = @"TTPageControlCellIdentifier";
     if (@available(iOS 11.0, *)) {
         self.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     }
-    self.normalFont = self.highlightFont = [UIFont systemFontOfSize:16];
+    self.normalFont = [UIFont systemFontOfSize:16];
+    self.highlightFontSize = 16.0f;
     self.normalColor = [UIColor lightGrayColor];
     self.highlightColor = [UIColor blackColor];
     self.lineSize = CGSizeMake(12, 3);
@@ -68,25 +70,16 @@ static NSString *itemIdentifier = @"TTPageControlCellIdentifier";
     _allowShowLineView = YES;
 }
 
-#pragma mark -
-#pragma mark -- set --
-- (void)setModelArray:(NSArray<TTPageControlModel *> *)modelArray{
-    _modelArray = modelArray;
-    _currentIndex = -1;
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        [_layoutArray removeAllObjects];
-        for (TTPageControlModel *m in modelArray) {
-            TTPageControlLayout *layout = [[TTPageControlLayout alloc] initWithModel:m
-                                                                          normalFont:_normalFont highlightFont:_highlightFont normalColor:_normalColor highlightColor:_highlightColor];
-            [self.layoutArray addObject:layout];
-        }
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self reloadData];
-            if (_layoutArray.count > _defaultIndex) {
-                [self scrollToIndex:_defaultIndex];
-            }
-        });
-    });
+- (void)setHighlightFontSize:(CGFloat)highlightFontSize{
+    _highlightFontSize = highlightFontSize;
+    if (_normalFont) {
+        _highlightScale = _highlightFontSize/_normalFont.pointSize;
+    }
+}
+
+- (void)setNormalFont:(UIFont *)normalFont{
+    _normalFont = normalFont;
+    _highlightScale = _highlightFontSize/_normalFont.pointSize;
 }
 
 - (void)setScrollingPage:(NSInteger)scrollingPage{
@@ -101,6 +94,30 @@ static NSString *itemIdentifier = @"TTPageControlCellIdentifier";
 - (void)setNormalColor:(UIColor *)normalColor{
     _normalColor = normalColor;
     _normalRGBA = [self getRGBWithColor:_normalColor];
+}
+
+#pragma mark -
+#pragma mark -- set --
+- (void)setModelArray:(NSArray<TTPageControlModel *> *)modelArray{
+    _modelArray = modelArray;
+    _currentIndex = -1;
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [_layoutArray removeAllObjects];
+        for (TTPageControlModel *m in modelArray) {
+            TTPageControlLayout *layout = [[TTPageControlLayout alloc] initWithModel:m
+                                                                          normalFont:_normalFont
+                                                                      highlightScale:_highlightScale
+                                                                         normalColor:_normalColor
+                                                                      highlightColor:_highlightColor];
+            [self.layoutArray addObject:layout];
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self reloadData];
+            if (_layoutArray.count > _defaultIndex) {
+                [self scrollToIndex:_defaultIndex];
+            }
+        });
+    });
 }
 
 #pragma mark -
@@ -219,8 +236,11 @@ static NSString *itemIdentifier = @"TTPageControlCellIdentifier";
             nextCell.titleLabel.textColor = [self getColorWithScale:_scrollScale
                                                                base:_normalRGBA
                                                             changed:self.changedHighlight];
-            cell.titleLabel.font = [UIFont fontWithName:_highlightFont.fontName size:_highlightFont.pointSize -(_highlightFont.pointSize - _normalFont.pointSize)*_scrollScale];
-            nextCell.titleLabel.font = [UIFont fontWithName:_highlightFont.fontName size:(_highlightFont.pointSize - _normalFont.pointSize)*_scrollScale+_normalFont.pointSize];
+
+            CGFloat scale = (_highlightScale-1)*scrollScale;
+            cell.scale= _highlightScale-scale;
+            nextCell.scale = 1+scale;
+            
             // line 渐变处理
             CGFloat maxWidth = nextCell.center.x - cell.center.x;
             CGFloat showWidth = _scrollScale* 2.0 * (maxWidth-_lineSize.width)+_lineSize.width;
@@ -250,8 +270,10 @@ static NSString *itemIdentifier = @"TTPageControlCellIdentifier";
             nextCell.titleLabel.textColor = [self getColorWithScale:-_scrollScale
                                                                base:_normalRGBA
                                                             changed:self.changedHighlight];
-            cell.titleLabel.font = [UIFont fontWithName:_highlightFont.fontName size:_highlightFont.pointSize -(_highlightFont.pointSize - _normalFont.pointSize)*(-_scrollScale)];
-            nextCell.titleLabel.font = [UIFont fontWithName:_highlightFont.fontName size:(_highlightFont.pointSize - _normalFont.pointSize)*(-_scrollScale)+_normalFont.pointSize];
+            CGFloat scale = -(_highlightScale-1)*scrollScale;
+            cell.scale = _highlightScale-scale;
+            nextCell.scale= 1+scale;
+            
             // line 渐变处理
             CGFloat maxWidth = cell.center.x - nextCell.center.x;
             CGFloat showWidth = _scrollScale *-2.0 * (maxWidth-_lineSize.width)+_lineSize.width;
