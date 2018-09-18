@@ -37,6 +37,11 @@
 @property (nonatomic, strong) UIColor   *highlightColor;
 
 /**
+ default [UIColor redColor]
+ */
+@property (nonatomic, strong) UIColor   *cellDotColor;
+
+/**
  allow scroll to the bar's center, default YES
  */
 @property (nonatomic, assign) BOOL      allowScrollToCenter;

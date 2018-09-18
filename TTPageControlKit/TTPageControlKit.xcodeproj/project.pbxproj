@@ -13,9 +13,7 @@
 		D34F46322019FFB100334BDF /* TTPageControlBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D34F462C2019FFB000334BDF /* TTPageControlBar.m */; };
 		D34F46332019FFB100334BDF /* TTPageControlModel.h in Headers */ = {isa = PBXBuildFile; fileRef = D34F462D2019FFB000334BDF /* TTPageControlModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D34F46342019FFB100334BDF /* TTPageControlBar.h in Headers */ = {isa = PBXBuildFile; fileRef = D34F462E2019FFB100334BDF /* TTPageControlBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D34F46352019FFB100334BDF /* TTPageControlCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D34F462F2019FFB100334BDF /* TTPageControlCell.m */; };
 		D34F46362019FFB100334BDF /* TTPageControlModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D34F46302019FFB100334BDF /* TTPageControlModel.m */; };
-		D34F46372019FFB100334BDF /* TTPageControlCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D34F46312019FFB100334BDF /* TTPageControlCell.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,9 +36,7 @@
 		D34F462C2019FFB000334BDF /* TTPageControlBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTPageControlBar.m; sourceTree = "<group>"; };
 		D34F462D2019FFB000334BDF /* TTPageControlModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTPageControlModel.h; sourceTree = "<group>"; };
 		D34F462E2019FFB100334BDF /* TTPageControlBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTPageControlBar.h; sourceTree = "<group>"; };
-		D34F462F2019FFB100334BDF /* TTPageControlCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTPageControlCell.m; sourceTree = "<group>"; };
 		D34F46302019FFB100334BDF /* TTPageControlModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTPageControlModel.m; sourceTree = "<group>"; };
-		D34F46312019FFB100334BDF /* TTPageControlCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTPageControlCell.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +64,7 @@
 				D34F46142019FEEC00334BDF /* TTPageControlKit */,
 				D34F461F2019FEEC00334BDF /* TTPageControlKitTests */,
 				D34F46132019FEEC00334BDF /* Products */,
-            );
+			);
 			sourceTree = "<group>";
 		};
 		D34F46132019FEEC00334BDF /* Products */ = {
@@ -86,8 +82,6 @@
 				D34F46152019FEEC00334BDF /* TTPageControlKit.h */,
 				D34F462E2019FFB100334BDF /* TTPageControlBar.h */,
 				D34F462C2019FFB000334BDF /* TTPageControlBar.m */,
-				D34F46312019FFB100334BDF /* TTPageControlCell.h */,
-				D34F462F2019FFB100334BDF /* TTPageControlCell.m */,
 				D34F462D2019FFB000334BDF /* TTPageControlModel.h */,
 				D34F46302019FFB100334BDF /* TTPageControlModel.m */,
 				D34F46162019FEEC00334BDF /* Info.plist */,
@@ -114,7 +108,6 @@
 				D34F46232019FEEC00334BDF /* TTPageControlKit.h in Headers */,
 				D34F46342019FFB100334BDF /* TTPageControlBar.h in Headers */,
 				D34F46332019FFB100334BDF /* TTPageControlModel.h in Headers */,
-				D34F46372019FFB100334BDF /* TTPageControlCell.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +209,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D34F46352019FFB100334BDF /* TTPageControlCell.m in Sources */,
 				D34F46362019FFB100334BDF /* TTPageControlModel.m in Sources */,
 				D34F46322019FFB100334BDF /* TTPageControlBar.m in Sources */,
 			);

@@ -7,8 +7,80 @@
 //
 
 #import "TTPageControlBar.h"
-#import "TTPageControlCell.h"
 #import "TTPageControlModel.h"
+
+static UIColor *dotColor;
+@interface TTPageControlCell : UICollectionViewCell
+@property (nonatomic, strong) UILabel       *titleLabel;
+@property (nonatomic, strong) CALayer       *dotLayer;
+
+@property (nonatomic, assign) BOOL          isSelect;
+@property (nonatomic, assign) CGFloat       scale;
+@property (nonatomic, strong) TTPageControlLayout *layout;
+
+@end
+@implementation TTPageControlCell
+- (UILabel *)titleLabel{
+    if (!_titleLabel) {
+        _titleLabel = [UILabel new];
+        _titleLabel.textAlignment = NSTextAlignmentCenter;
+        _titleLabel.textColor = _layout.normalColor;
+        _titleLabel.font = _layout.maxFont;  // 以大字体为默认字体，避免缩放模糊
+        _titleLabel.transform = CGAffineTransformMakeScale(_layout.scale, _layout.scale);
+        [self.contentView addSubview:_titleLabel];
+    }
+    return _titleLabel;
+}
+
+- (CALayer *)dotLayer{
+    if (!_dotLayer) {
+        _dotLayer = [CALayer new];
+        _dotLayer.frame = CGRectMake(self.bounds.size.width - 4, 0, 6, 6);
+        _dotLayer.masksToBounds = YES;
+        _dotLayer.cornerRadius = 3.0f;
+        _dotLayer.backgroundColor = (dotColor?:[UIColor redColor]).CGColor;
+        [self.contentView.layer addSublayer:_dotLayer];
+    }
+    return _dotLayer;
+}
+
+- (void)layoutSubviews{
+    [super layoutSubviews];
+    _titleLabel.frame = self.bounds;
+    _dotLayer.frame = CGRectMake(self.bounds.size.width-4, 0, 6, 6);
+}
+
+- (void)setLayout:(TTPageControlLayout *)layout{
+    if (_layout == layout) {
+        return;
+    }
+    _layout = layout;
+    self.titleLabel.text = _layout.model.title;
+    if (_layout.model.dot_status) {
+        self.dotLayer.hidden = NO;
+    }else{
+        _dotLayer.hidden = YES;
+    }
+}
+
+- (void)setIsSelect:(BOOL)isSelect{
+    if (isSelect) {
+        _titleLabel.textColor = _layout.highlightColor;
+        _titleLabel.transform = CGAffineTransformMakeScale(1, 1);
+    }else{
+        _titleLabel.textColor = _layout.normalColor;
+        _titleLabel.transform = CGAffineTransformMakeScale(_layout.scale, _layout.scale);
+    }
+}
+
+- (void)setScale:(CGFloat)scale{
+    if (_scale != scale) {
+        _scale = scale;
+        _titleLabel.transform = CGAffineTransformMakeScale(_layout.scale*_scale, _layout.scale*_scale);
+    }
+}
+@end
+
 
 static NSString *itemIdentifier = @"TTPageControlCellIdentifier";
 @interface TTPageControlBar ()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>{
@@ -94,6 +166,14 @@ static NSString *itemIdentifier = @"TTPageControlCellIdentifier";
 - (void)setNormalColor:(UIColor *)normalColor{
     _normalColor = normalColor;
     _normalRGBA = [self getRGBWithColor:_normalColor];
+}
+
+- (void)setCellDotColor:(UIColor *)cellDotColor{
+    _cellDotColor = cellDotColor;
+    dotColor = _cellDotColor;
+}
+- (void)setDotColor:(UIColor *)dotColor{
+    
 }
 
 #pragma mark -
@@ -309,7 +389,7 @@ static NSString *itemIdentifier = @"TTPageControlCellIdentifier";
         TTPageControlCell *item = (TTPageControlCell *)[self cellForItemAtIndexPath:indexPath];
         if (item) {
             if (item.layout.model.dot_status) {
-                item.dotView.hidden = YES;
+                item.dotLayer.hidden = YES;
             }
             item.isSelect = YES;
             if (indexPath.row < [self numberOfItemsInSection:0]) {
@@ -383,6 +463,10 @@ static NSString *itemIdentifier = @"TTPageControlCellIdentifier";
                            green:([base[1] floatValue]+[changed[1] floatValue]*scale)
                             blue:([base[2] floatValue]+[changed[2] floatValue]*scale)
                            alpha:([base[3] floatValue]+[changed[3] floatValue]*scale)];
+}
+
+- (void)dealloc{
+    dotColor = nil;
 }
 
 @end
